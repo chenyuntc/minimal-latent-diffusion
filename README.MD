@@ -3,6 +3,8 @@
 This project implements a latent diffusion model for image generation using PyTorch and the `diffusers` library.
 It first pretrains an autoencoder to compress image to latent space, then perform diffusion in the latent space, which can be more efficient than pixel space.
 
+![Generated Samples](res.png)
+
 ## Dependencies
 You can install these dependencies using pip:
 

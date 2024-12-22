@@ -21,12 +21,12 @@ You can also use other datasets, just make sure the images are put in one subfol
 
 The autoencoder needs to be trained first. You can train it using the `autoencoder.py` script.
 
-    ```bash
-    python -m torch.distributed.run --nproc_per_node=NUM_GPUS autoencoder.py
-    ```
+```bash
+python -m torch.distributed.run --nproc_per_node=NUM_GPUS autoencoder.py
+```
 
-    Replace `NUM_GPUS` with the number of GPUs you want to use. Adjust hyperparameters in `autoencoder.py` as needed.
-    You can debug/run in single GPU by `python autoencoder.py`
+Replace `NUM_GPUS` with the number of GPUs you want to use. Adjust hyperparameters in `autoencoder.py` as needed.
+You can debug/run in single GPU by `python autoencoder.py`
 
 ### Training the Latent Diffusion Model (takes 2-4 GPU*Day)
 
@@ -36,9 +36,9 @@ Once the autoencoder is trained, you can train the latent diffusion model using 
 
 2. **Run the training script:**
 
-    ```bash
-        python -m torch.distributed.run --nproc_per_node=NUM_GPUS latent_diffusion.py
-    ```
+```bash
+python -m torch.distributed.run --nproc_per_node=NUM_GPUS latent_diffusion.py
+```
 ### Generating Samples
 
 During training, `latent_diffusion.py` will periodically generate and save sample images in the current directory. You can monitor these to track the progress of training.

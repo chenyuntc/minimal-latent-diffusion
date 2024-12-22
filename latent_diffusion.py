@@ -185,7 +185,7 @@ for epoch in trange(NUM_EPOCHS):
                     "optimizer_state_dict": optimizer.state_dict(),
                     "loss": avg_loss,
                 },
-                f"ckpt/n_latent_diffusion_checkpoint_{epoch}.pt",
+                f"./latent_diffusion_checkpoint_{epoch}.pt",
             )
         if epoch == 100:
             for param_group in optimizer.param_groups:
